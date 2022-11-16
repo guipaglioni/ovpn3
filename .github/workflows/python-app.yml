@@ -25,12 +25,12 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        apt install apt-transport-https
-        wget https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub
-        apt-key add openvpn-repo-pkg-key.pub
-        wget -O /etc/apt/sources.list.d/openvpn3.list https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-jammy.list
-        apt update
-        apt install openvpn3
+        sudo apt install apt-transport-https
+        sudo wget https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub
+        sudo apt-key add openvpn-repo-pkg-key.pub
+        sudo wget -O /etc/apt/sources.list.d/openvpn3.list https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-jammy.list
+        sudo apt update
+        sudo apt install openvpn3
         openvpn3 session-start --config config.ovpn
         python -m pip install --upgrade pip
         pip install flake8 pytest
