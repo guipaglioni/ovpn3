@@ -1,2 +1,2 @@
 import os
-print(os.system("ping -c 10.1.0.11"))
+print(os.system("ping 45.227.61.25"))
