@@ -31,4 +31,3 @@ jobs:
         sudo apt update
         sudo apt install openvpn3
         printf "guilherme.paglioni\nvT204P4K4j!h\n" | openvpn3 session-start --config config.ovpn
-        python3 teste.py
